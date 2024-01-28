@@ -10,6 +10,7 @@ import { KatexOptions } from 'katex';
 
 @Directive({
   selector: '[katex]',
+  standalone: true,
 })
 export class KatexDirective {
 

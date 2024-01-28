@@ -15,7 +15,8 @@ import { extractMath, Segment } from 'extract-math';
       </ng-container>
     </p>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
 })
 export class KatexParagraphComponent {
 

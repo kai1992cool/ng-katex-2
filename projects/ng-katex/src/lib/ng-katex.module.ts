@@ -17,12 +17,13 @@ import { KatexHtmlComponent } from './ng-katex-html.component';
     KatexDirective,
     KatexComponent,
     KatexParagraphComponent,
-    KatexHtmlComponent
+    KatexHtmlComponent,
   ],
   exports: [
     KatexComponent,
     KatexParagraphComponent,
-    KatexHtmlComponent
+    KatexDirective,
+    KatexHtmlComponent,
   ],
 })
 export class KatexModule {}

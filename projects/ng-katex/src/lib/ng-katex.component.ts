@@ -14,6 +14,7 @@ import { KatexOptions } from 'katex';
           (someEvent)="hasError($event)">
     </span>
   `,
+  standalone: true,
 })
 export class KatexComponent {
 

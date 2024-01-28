@@ -6,7 +6,8 @@ import { KatexService } from './ng-katex.service';
 
 @Component({
   selector: 'ng-katex-html',
-  template: `<span [innerHTML]="allHtml"></span>`
+  template: `<span [innerHTML]="allHtml"></span>`,
+  standalone: true,
 })
 export class KatexHtmlComponent {
   constructor(private domSanitizer: DomSanitizer, private katexService: KatexService) { }
