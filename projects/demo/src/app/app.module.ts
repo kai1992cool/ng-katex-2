@@ -3,10 +3,9 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { KatexModule } from 'ng-katex';
+import { KatexModule } from 'ng-katex-2';
 
 import { AppComponent } from './app.component';
-
 
 @NgModule({
   imports: [
@@ -21,4 +20,4 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

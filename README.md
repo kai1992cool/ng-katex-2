@@ -1,3 +1,17 @@
+# About ng-KaTeX-2:
+
+This repo was created for [ng-katex library is compatible with Angular 18?](https://stackoverflow.com/questions/79445693/ng-katex-library-is-compatible-with-angular-18)
+
+The reason for creation of this repository is because the original repo [ng-katex](https://github.com/garciparedes/ng-katex) has been archived and supports upto angular 13.
+
+Since angular18 is throwing error for components not being standalone, I upgraded to version 14, so that it can be used for angular versions 14 and above.
+
+All credits to the original author, I am just upgrading for it to work for latest versions of angular and future maintainenace if necessary.
+
+---
+
+# Original [ng-katex](https://github.com/garciparedes/ng-katex) Readme.MD:
+
 # ng-KaTeX
 
 [![npm](https://img.shields.io/npm/v/ng-katex.svg)](https://www.npmjs.com/package/ng-katex)
