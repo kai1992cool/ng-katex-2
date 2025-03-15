@@ -5,5 +5,5 @@ export declare class KatexParagraphComponent {
     private _paragraph;
     set paragraph(paragraph: string);
     static ɵfac: i0.ɵɵFactoryDeclaration<KatexParagraphComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<KatexParagraphComponent, "ng-katex-paragraph", never, { "paragraph": "paragraph"; }, {}, never, never, true>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<KatexParagraphComponent, "ng-katex-paragraph", never, { "paragraph": "paragraph"; }, {}, never, never, true, never>;
 }
