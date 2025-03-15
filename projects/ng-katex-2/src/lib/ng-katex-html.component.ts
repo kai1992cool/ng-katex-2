@@ -1,41 +1,32 @@
-import { Component, Input } from '@angular/core';
+import { Component, computed, inject, input, InputSignal, Signal } from '@angular/core';
 import { extractMath, Segment } from 'extract-math';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { KatexService } from './ng-katex.service';
+import { throwNoProviderError } from './utils';
 
 @Component({
   selector: 'ng-katex-html',
-  template: `<span [innerHTML]="allHtml"></span>`,
+  template: `<span [innerHTML]="allHtml()"></span>`,
   standalone: true,
 })
 export class KatexHtmlComponent {
-  constructor(private domSanitizer: DomSanitizer, private katexService: KatexService) { }
+  private domSanitizer: DomSanitizer = inject(DomSanitizer); 
+  private katexService: KatexService = inject(KatexService);
 
-  allHtml!: SafeHtml;
-
-  _html!: string;
-
-  private _segments: Segment[] = [];
-
-  @Input() set html(html: string) {
-
-    if (html !== this._html) {
-      this._html = html;
-      this.updateAllHtml();
-    }
-  }
-
-  private updateAllHtml() {
-
-    if (!this._html) {
-      this.allHtml = '';
-      this._segments = [];
-      return;
+  html: InputSignal<string> = input('');
+  allHtml: Signal<SafeHtml | undefined> = computed(() => {
+    const html  = this.html();
+    let allHtmlValue: string = '';
+    let _segments: Segment[] = [];
+    if (!html) {
+      allHtmlValue = '';
+      _segments = [];
+      return allHtmlValue;
     }
 
-    this._segments = extractMath(this._html);
+    _segments = extractMath(html);
 
-    const allHtml = this._segments.map((seg) => {
+    const allHtml = _segments.map((seg: Segment) => {
       if (seg.math) {
         return this.katexService.renderToString(seg.raw, { displayMode: seg.type === 'display' });
       }
@@ -45,10 +36,10 @@ export class KatexHtmlComponent {
     }).reduce((total, current) => {
       return total += current;
     });
-    this.allHtml = this.domSanitizer.bypassSecurityTrustHtml(allHtml);
-  }
+    return this.domSanitizer.bypassSecurityTrustHtml(allHtml);
+  });
 
-  get segments(): Segment[] {
-    return this._segments;
+  constructor() {
+    throwNoProviderError();
   }
 }

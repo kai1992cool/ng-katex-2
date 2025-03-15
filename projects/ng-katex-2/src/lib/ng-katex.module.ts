@@ -17,8 +17,6 @@ import { KatexHtmlComponent } from './ng-katex-html.component';
   providers: [
     KatexService,
   ],
-  declarations: [
-  ],
   exports: [
     KatexDirective,
     KatexComponent,
