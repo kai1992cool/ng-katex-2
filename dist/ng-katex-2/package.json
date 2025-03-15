@@ -10,11 +10,7 @@
     "katex": "^0.16.21",
     "tslib": "^2.3.0"
   },
-  "module": "fesm2015/ng-katex-2.mjs",
-  "es2020": "fesm2020/ng-katex-2.mjs",
-  "esm2020": "esm2020/ng-katex-2.mjs",
-  "fesm2020": "fesm2020/ng-katex-2.mjs",
-  "fesm2015": "fesm2015/ng-katex-2.mjs",
+  "module": "fesm2022/ng-katex-2.mjs",
   "typings": "index.d.ts",
   "exports": {
     "./package.json": {
@@ -22,11 +18,9 @@
     },
     ".": {
       "types": "./index.d.ts",
-      "esm2020": "./esm2020/ng-katex-2.mjs",
-      "es2020": "./fesm2020/ng-katex-2.mjs",
-      "es2015": "./fesm2015/ng-katex-2.mjs",
-      "node": "./fesm2015/ng-katex-2.mjs",
-      "default": "./fesm2020/ng-katex-2.mjs"
+      "esm2022": "./esm2022/ng-katex-2.mjs",
+      "esm": "./esm2022/ng-katex-2.mjs",
+      "default": "./fesm2022/ng-katex-2.mjs"
     }
   },
   "sideEffects": false
