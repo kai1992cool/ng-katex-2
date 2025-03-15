@@ -24,3 +24,5 @@ testem.log
 /.chrome
 /.git
 /.rpt2_cache
+/.history
+.angular

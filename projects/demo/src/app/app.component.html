@@ -1,21 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>
-  Welcome to <a target="_blank" [href]="url">{{title}}</a> demo app!
+  Welcome to <a target="_blank" [href]="url">{{ title }}</a> demo app!
 </h1>
 
 <div class="container">
-  <h2>Equation: </h2>
+  <h2>Equation:</h2>
   <p>Type here your equation:</p>
-  <p><input type="text" [(ngModel)]="equation"></p>
+  <p><input type="text" [(ngModel)]="equation" /></p>
   <p><ng-katex [equation]="equation" [options]="options"></ng-katex></p>
 
-  <h2>Paragraph: </h2>
+  <h2>Paragraph:</h2>
   <p>Type here your paragraph:</p>
-  <p><textarea  [(ngModel)]="paragraph" rows="6"></textarea></p>
+  <p><textarea [(ngModel)]="paragraph" rows="6"></textarea></p>
   <ng-katex-paragraph [paragraph]="paragraph"></ng-katex-paragraph>
 
   <h2>HTML: (Security Note: this bypasses Angular DOM Sanitization)</h2>
   <p>Type here your HTML:</p>
-  <p><textarea  [(ngModel)]="html" rows="6"></textarea></p>
+  <p><textarea [(ngModel)]="html" rows="6"></textarea></p>
   <ng-katex-html [html]="html"></ng-katex-html>
 </div>
