@@ -7,5 +7,5 @@ export declare class KatexComponent {
     onError: EventEmitter<any>;
     hasError(error: any): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<KatexComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<KatexComponent, "ng-katex", never, { "equation": "equation"; "options": "options"; }, { "onError": "onError"; }, never, never, true>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<KatexComponent, "ng-katex", never, { "equation": "equation"; "options": "options"; }, { "onError": "onError"; }, never, never, true, never>;
 }

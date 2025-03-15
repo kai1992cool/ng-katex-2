@@ -25,3 +25,4 @@ testem.log
 /.git
 /.rpt2_cache
 /.history
+.angular
