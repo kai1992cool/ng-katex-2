@@ -1,8 +1,8 @@
 import * as i0 from '@angular/core';
-import { Injectable, EventEmitter, Directive, Input, Output, Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
+import { Injectable, EventEmitter, Output, Input, Directive, Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
 import { render, renderToString } from 'katex';
-import { NgIf, NgFor, CommonModule } from '@angular/common';
 import { extractMath } from 'extract-math';
+import { CommonModule } from '@angular/common';
 import * as i1 from '@angular/platform-browser';
 
 class KatexService {
@@ -12,10 +12,10 @@ class KatexService {
     renderToString(equation, options) {
         return renderToString(equation, options);
     }
-    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexService, deps: [], target: i0.ɵɵFactoryTarget.Injectable }); }
-    /** @nocollapse */ static { this.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexService }); }
+    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexService, deps: [], target: i0.ɵɵFactoryTarget.Injectable }); }
+    /** @nocollapse */ static { this.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexService }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexService, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexService, decorators: [{
             type: Injectable
         }] });
 
@@ -33,16 +33,16 @@ class KatexDirective {
             this.onError.emit(e);
         }
     }
-    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexDirective, deps: [{ token: i0.ElementRef }, { token: KatexService }], target: i0.ɵɵFactoryTarget.Directive }); }
-    /** @nocollapse */ static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "16.2.12", type: KatexDirective, isStandalone: true, selector: "[katex]", inputs: { equation: ["katex", "equation"], options: ["katex-options", "options"] }, outputs: { onError: "onError" }, usesOnChanges: true, ngImport: i0 }); }
+    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexDirective, deps: [{ token: i0.ElementRef }, { token: KatexService }], target: i0.ɵɵFactoryTarget.Directive }); }
+    /** @nocollapse */ static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "17.3.12", type: KatexDirective, isStandalone: true, selector: "[katex]", inputs: { equation: ["katex", "equation"], options: ["katex-options", "options"] }, outputs: { onError: "onError" }, usesOnChanges: true, ngImport: i0 }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexDirective, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexDirective, decorators: [{
             type: Directive,
             args: [{
                     selector: '[katex]',
                     standalone: true,
                 }]
-        }], ctorParameters: function () { return [{ type: i0.ElementRef }, { type: KatexService }]; }, propDecorators: { equation: [{
+        }], ctorParameters: () => [{ type: i0.ElementRef }, { type: KatexService }], propDecorators: { equation: [{
                 type: Input,
                 args: ['katex']
             }], options: [{
@@ -59,15 +59,15 @@ class KatexComponent {
     hasError(error) {
         this.onError.emit(error);
     }
-    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    /** @nocollapse */ static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.2.12", type: KatexComponent, isStandalone: true, selector: "ng-katex", inputs: { equation: "equation", options: "options" }, outputs: { onError: "onError" }, ngImport: i0, template: `
+    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    /** @nocollapse */ static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.3.12", type: KatexComponent, isStandalone: true, selector: "ng-katex", inputs: { equation: "equation", options: "options" }, outputs: { onError: "onError" }, ngImport: i0, template: `
     <span [katex]="equation"
           [katex-options]="options"
           (someEvent)="hasError($event)">
     </span>
   `, isInline: true, dependencies: [{ kind: "directive", type: KatexDirective, selector: "[katex]", inputs: ["katex", "katex-options"], outputs: ["onError"] }] }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexComponent, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexComponent, decorators: [{
             type: Component,
             args: [{
                     selector: 'ng-katex',
@@ -98,38 +98,42 @@ class KatexParagraphComponent {
             this.segments = extractMath(this._paragraph);
         }
     }
-    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexParagraphComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    /** @nocollapse */ static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.2.12", type: KatexParagraphComponent, isStandalone: true, selector: "ng-katex-paragraph", inputs: { paragraph: "paragraph" }, ngImport: i0, template: `
+    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexParagraphComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    /** @nocollapse */ static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "17.0.0", version: "17.3.12", type: KatexParagraphComponent, isStandalone: true, selector: "ng-katex-paragraph", inputs: { paragraph: "paragraph" }, ngImport: i0, template: `
     <p>
-      <ng-container *ngFor="let segment of segments">
-        <ng-katex
-          *ngIf="segment.math else text"
-          [equation]="segment.raw"
-          [options]="{ displayMode: segment.type === 'display' }">
-        </ng-katex>
-        <ng-template #text>{{ segment.value }}</ng-template>
-      </ng-container>
+      @for (segment of segments; track segment) {
+        @if (segment.math) {
+          <ng-katex
+            [equation]="segment.raw"
+            [options]="{ displayMode: segment.type === 'display' }">
+          </ng-katex>
+        } @else {
+          {{ segment.value }}
+        }
+      }
     </p>
-  `, isInline: true, dependencies: [{ kind: "directive", type: NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "directive", type: NgFor, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "component", type: KatexComponent, selector: "ng-katex", inputs: ["equation", "options"], outputs: ["onError"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush }); }
+    `, isInline: true, dependencies: [{ kind: "component", type: KatexComponent, selector: "ng-katex", inputs: ["equation", "options"], outputs: ["onError"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexParagraphComponent, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexParagraphComponent, decorators: [{
             type: Component,
             args: [{
                     selector: 'ng-katex-paragraph',
                     template: `
     <p>
-      <ng-container *ngFor="let segment of segments">
-        <ng-katex
-          *ngIf="segment.math else text"
-          [equation]="segment.raw"
-          [options]="{ displayMode: segment.type === 'display' }">
-        </ng-katex>
-        <ng-template #text>{{ segment.value }}</ng-template>
-      </ng-container>
+      @for (segment of segments; track segment) {
+        @if (segment.math) {
+          <ng-katex
+            [equation]="segment.raw"
+            [options]="{ displayMode: segment.type === 'display' }">
+          </ng-katex>
+        } @else {
+          {{ segment.value }}
+        }
+      }
     </p>
-  `,
+    `,
                     changeDetection: ChangeDetectionStrategy.OnPush,
-                    imports: [NgIf, NgFor, KatexComponent],
+                    imports: [KatexComponent],
                     standalone: true,
                 }]
         }], propDecorators: { paragraph: [{
@@ -170,23 +174,23 @@ class KatexHtmlComponent {
     get segments() {
         return this._segments;
     }
-    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexHtmlComponent, deps: [{ token: i1.DomSanitizer }, { token: KatexService }], target: i0.ɵɵFactoryTarget.Component }); }
-    /** @nocollapse */ static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.2.12", type: KatexHtmlComponent, isStandalone: true, selector: "ng-katex-html", inputs: { html: "html" }, ngImport: i0, template: `<span [innerHTML]="allHtml"></span>`, isInline: true }); }
+    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexHtmlComponent, deps: [{ token: i1.DomSanitizer }, { token: KatexService }], target: i0.ɵɵFactoryTarget.Component }); }
+    /** @nocollapse */ static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.3.12", type: KatexHtmlComponent, isStandalone: true, selector: "ng-katex-html", inputs: { html: "html" }, ngImport: i0, template: `<span [innerHTML]="allHtml"></span>`, isInline: true }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexHtmlComponent, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexHtmlComponent, decorators: [{
             type: Component,
             args: [{
                     selector: 'ng-katex-html',
                     template: `<span [innerHTML]="allHtml"></span>`,
                     standalone: true,
                 }]
-        }], ctorParameters: function () { return [{ type: i1.DomSanitizer }, { type: KatexService }]; }, propDecorators: { html: [{
+        }], ctorParameters: () => [{ type: i1.DomSanitizer }, { type: KatexService }], propDecorators: { html: [{
                 type: Input
             }] } });
 
 class KatexModule {
-    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
-    /** @nocollapse */ static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.2.12", ngImport: i0, type: KatexModule, imports: [CommonModule,
+    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
+    /** @nocollapse */ static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "17.3.12", ngImport: i0, type: KatexModule, imports: [CommonModule,
             KatexDirective,
             KatexComponent,
             KatexParagraphComponent,
@@ -194,11 +198,11 @@ class KatexModule {
             KatexComponent,
             KatexParagraphComponent,
             KatexHtmlComponent] }); }
-    /** @nocollapse */ static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexModule, providers: [
+    /** @nocollapse */ static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexModule, providers: [
             KatexService,
         ], imports: [CommonModule] }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

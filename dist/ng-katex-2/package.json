@@ -1,9 +1,9 @@
 {
   "name": "ng-katex-2",
-  "version": "16.2.12",
+  "version": "17.3.12",
   "peerDependencies": {
-    "@angular/common": "^16.2.12",
-    "@angular/core": "^16.2.12"
+    "@angular/common": "^17.3.12",
+    "@angular/core": "^17.3.12"
   },
   "dependencies": {
     "extract-math": "^1.2.3",

@@ -7,8 +7,8 @@ import { KatexParagraphComponent } from './ng-katex-paragraph.component';
 import { KatexHtmlComponent } from './ng-katex-html.component';
 import * as i0 from "@angular/core";
 export class KatexModule {
-    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
-    /** @nocollapse */ static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.2.12", ngImport: i0, type: KatexModule, imports: [CommonModule,
+    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
+    /** @nocollapse */ static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "17.3.12", ngImport: i0, type: KatexModule, imports: [CommonModule,
             KatexDirective,
             KatexComponent,
             KatexParagraphComponent,
@@ -16,11 +16,11 @@ export class KatexModule {
             KatexComponent,
             KatexParagraphComponent,
             KatexHtmlComponent] }); }
-    /** @nocollapse */ static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexModule, providers: [
+    /** @nocollapse */ static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexModule, providers: [
             KatexService,
         ], imports: [CommonModule] }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.12", ngImport: i0, type: KatexModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: KatexModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

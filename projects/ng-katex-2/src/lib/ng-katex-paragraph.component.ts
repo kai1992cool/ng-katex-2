@@ -1,4 +1,4 @@
-import { NgFor, NgIf } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { extractMath, Segment } from 'extract-math';
 import { KatexComponent } from './ng-katex.component';
@@ -7,18 +7,20 @@ import { KatexComponent } from './ng-katex.component';
   selector: 'ng-katex-paragraph',
   template: `
     <p>
-      <ng-container *ngFor="let segment of segments">
-        <ng-katex
-          *ngIf="segment.math else text"
-          [equation]="segment.raw"
-          [options]="{ displayMode: segment.type === 'display' }">
-        </ng-katex>
-        <ng-template #text>{{ segment.value }}</ng-template>
-      </ng-container>
+      @for (segment of segments; track segment) {
+        @if (segment.math) {
+          <ng-katex
+            [equation]="segment.raw"
+            [options]="{ displayMode: segment.type === 'display' }">
+          </ng-katex>
+        } @else {
+          {{ segment.value }}
+        }
+      }
     </p>
-  `,
+    `,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIf, NgFor, KatexComponent],
+  imports: [KatexComponent],
   standalone: true,
 })
 export class KatexParagraphComponent {
