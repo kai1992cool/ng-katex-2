@@ -11,5 +11,5 @@ export declare class KatexDirective {
     constructor(el: ElementRef, katexService: KatexService);
     ngOnChanges(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<KatexDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<KatexDirective, "[katex]", never, { "equation": { "alias": "katex"; "required": false; }; "options": { "alias": "katex-options"; "required": false; }; }, { "onError": "onError"; }, never, never, true, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<KatexDirective, "[katex]", never, { "equation": "katex"; "options": "katex-options"; }, { "onError": "onError"; }, never, never, true, never>;
 }

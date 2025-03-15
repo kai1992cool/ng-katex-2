@@ -13,5 +13,5 @@ export declare class KatexHtmlComponent {
     private updateAllHtml;
     get segments(): Segment[];
     static ɵfac: i0.ɵɵFactoryDeclaration<KatexHtmlComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<KatexHtmlComponent, "ng-katex-html", never, { "html": { "alias": "html"; "required": false; }; }, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<KatexHtmlComponent, "ng-katex-html", never, { "html": "html"; }, {}, never, never, true, never>;
 }
