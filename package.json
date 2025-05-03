@@ -10,6 +10,7 @@
     "start": "ng serve demo",
     "watch": "ng build ng-katex-2 --watch",
     "build": "ng build ng-katex-2",
+    "patch": "npm version patch --depth 9999 && cd projects/ng-katex-2 && npm version patch --depth 9999 && cd ../..",
     "build:demo": "ng build ng-katex-2 && ng build demo",
     "publish:demo": "ng build --prod --base-href=\"https://garciparedes.me/ng-katex-2/\" demo && rm -rf docs && cp -R dist/demo docs",
     "publish": "npm run build && cp README.md LICENSE dist/ng-katex-2 && cd dist/ng-katex-2 && npm publish"
