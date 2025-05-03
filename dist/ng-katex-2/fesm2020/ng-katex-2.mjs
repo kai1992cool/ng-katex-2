@@ -1,9 +1,9 @@
 import * as i0 from '@angular/core';
 import { Injectable, EventEmitter, Directive, Input, Output, Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
 import { render, renderToString } from 'katex';
-import { NgIf, NgFor, CommonModule } from '@angular/common';
 import { extractMath } from 'extract-math';
 import * as i1 from '@angular/platform-browser';
+import { NgIf, NgFor, CommonModule } from '@angular/common';
 
 class KatexService {
     render(equation, element, options) {
@@ -88,54 +88,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImpo
                 type: Output
             }] } });
 
-class KatexParagraphComponent {
-    constructor() {
-        this.segments = [];
-    }
-    set paragraph(paragraph) {
-        if (paragraph !== this._paragraph) {
-            this._paragraph = paragraph;
-            this.segments = extractMath(this._paragraph);
-        }
-    }
-}
-/** @nocollapse */ KatexParagraphComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: KatexParagraphComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-/** @nocollapse */ KatexParagraphComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "15.2.10", type: KatexParagraphComponent, isStandalone: true, selector: "ng-katex-paragraph", inputs: { paragraph: "paragraph" }, ngImport: i0, template: `
-    <p>
-      <ng-container *ngFor="let segment of segments">
-        <ng-katex
-          *ngIf="segment.math else text"
-          [equation]="segment.raw"
-          [options]="{ displayMode: segment.type === 'display' }">
-        </ng-katex>
-        <ng-template #text>{{ segment.value }}</ng-template>
-      </ng-container>
-    </p>
-  `, isInline: true, dependencies: [{ kind: "directive", type: NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "directive", type: NgFor, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "component", type: KatexComponent, selector: "ng-katex", inputs: ["equation", "options"], outputs: ["onError"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: KatexParagraphComponent, decorators: [{
-            type: Component,
-            args: [{
-                    selector: 'ng-katex-paragraph',
-                    template: `
-    <p>
-      <ng-container *ngFor="let segment of segments">
-        <ng-katex
-          *ngIf="segment.math else text"
-          [equation]="segment.raw"
-          [options]="{ displayMode: segment.type === 'display' }">
-        </ng-katex>
-        <ng-template #text>{{ segment.value }}</ng-template>
-      </ng-container>
-    </p>
-  `,
-                    changeDetection: ChangeDetectionStrategy.OnPush,
-                    imports: [NgIf, NgFor, KatexComponent],
-                    standalone: true,
-                }]
-        }], propDecorators: { paragraph: [{
-                type: Input
-            }] } });
-
 class KatexHtmlComponent {
     constructor(domSanitizer, katexService) {
         this.domSanitizer = domSanitizer;
@@ -181,6 +133,54 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImpo
                     standalone: true,
                 }]
         }], ctorParameters: function () { return [{ type: i1.DomSanitizer }, { type: KatexService }]; }, propDecorators: { html: [{
+                type: Input
+            }] } });
+
+class KatexParagraphComponent {
+    constructor() {
+        this.segments = [];
+    }
+    set paragraph(paragraph) {
+        if (paragraph !== this._paragraph) {
+            this._paragraph = paragraph;
+            this.segments = extractMath(this._paragraph);
+        }
+    }
+}
+/** @nocollapse */ KatexParagraphComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: KatexParagraphComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+/** @nocollapse */ KatexParagraphComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "15.2.10", type: KatexParagraphComponent, isStandalone: true, selector: "ng-katex-paragraph", inputs: { paragraph: "paragraph" }, ngImport: i0, template: `
+    <p>
+      <ng-container *ngFor="let segment of segments">
+        <ng-katex
+          *ngIf="segment.math else text"
+          [equation]="segment.raw"
+          [options]="{ displayMode: segment.type === 'display' }">
+        </ng-katex>
+        <ng-template #text>{{ segment.value }}</ng-template>
+      </ng-container>
+    </p>
+  `, isInline: true, dependencies: [{ kind: "directive", type: NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "directive", type: NgFor, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "component", type: KatexComponent, selector: "ng-katex", inputs: ["equation", "options"], outputs: ["onError"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: KatexParagraphComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'ng-katex-paragraph',
+                    template: `
+    <p>
+      <ng-container *ngFor="let segment of segments">
+        <ng-katex
+          *ngIf="segment.math else text"
+          [equation]="segment.raw"
+          [options]="{ displayMode: segment.type === 'display' }">
+        </ng-katex>
+        <ng-template #text>{{ segment.value }}</ng-template>
+      </ng-container>
+    </p>
+  `,
+                    changeDetection: ChangeDetectionStrategy.OnPush,
+                    imports: [NgIf, NgFor, KatexComponent],
+                    standalone: true,
+                }]
+        }], propDecorators: { paragraph: [{
                 type: Input
             }] } });
 

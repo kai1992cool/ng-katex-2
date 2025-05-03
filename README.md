@@ -83,7 +83,7 @@ We can also add `KatexDirective` to the `declarations` array and `KatexService` 
         // or just with a single line
         // KatexModule, // imports everything.
       ],
-      providers: [KatexService],
+      providers: [KatexService], // service needed to use the directive.
       bootstrap: [AppComponent],
     })
     export class AppModule {}
@@ -94,7 +94,7 @@ We can also add `KatexDirective` to the `declarations` array and `KatexService` 
 | Angular version | ng-katex-2 version | Stackblitz Standalone Demo | Stackblitz Modular Demo  |
 | --------------- | ------------------ | -------------------------- | ------------------------ |
 | Angular 14      | 14.0.x             | [Stackblitz Demo - 14]()   | [Stackblitz Demo - 14]() |
-| Angular 15      | 15.0.x             | [Stackblitz Demo - 15](https://stackblitz.com/edit/stackblitz-starters-payq5ruj?file=src%2Fmain.ts)   | [Stackblitz Demo - 15]() |
+| Angular 15      | 15.0.x             | [Stackblitz Demo - 15](https://stackblitz.com/edit/stackblitz-starters-payq5ruj?file=src%2Fmain.ts)   | [Stackblitz Demo - 15](https://stackblitz.com/edit/stackblitz-starters-s2cudydj) |
 | Angular 16      | 16.0.x             | [Stackblitz Demo - 16]()   | [Stackblitz Demo - 16]() |
 | Angular 17      | 17.0.x             | [Stackblitz Demo - 17]()   | [Stackblitz Demo - 17]() |
 | Angular 18      | 18.0.x             | [Stackblitz Demo - 18]()   | [Stackblitz Demo - 18]() |
