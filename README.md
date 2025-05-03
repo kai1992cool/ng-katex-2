@@ -8,6 +8,37 @@ Since angular18 is throwing error for components not being standalone, I upgrade
 
 All credits to the original author, I am just upgrading for it to work for latest versions of angular and future maintainenace if necessary.
 
+# Usage with standalone components:
+
+## Usage of `KatexDirective`:
+
+The `KatexDirective` requires `KatexService`, which needs to be provided, for this we need to add the `importProvidersFrom(KatexModule)` to our `bootstrapApplication`'s `providers` array.
+
+    import { importProvidersFrom } from '@angular/core';
+    import { bootstrapApplication } from '@angular/platform-browser';
+    import { KatexModule } from 'ng-katex-2';
+
+    bootstrapApplication(App, {
+      providers: [importProvidersFrom(KatexModule)],
+    });
+
+The other component do not have any DI for `KatexService`, so you can just import and use them:
+
+    @Component({
+      selector: 'app-root',
+      imports: [KatexComponent],
+      template: `
+        <ng-katex [equation]="equation" [options]="options"></ng-katex>
+      `,
+    })
+    export class App {
+      equation: string = '\\sum_{i=1}^nx_i';
+      options: KatexOptions = {
+        displayMode: true,
+      };
+    }
+
+
 ---
 
 # Original [ng-katex](https://github.com/garciparedes/ng-katex) Readme.MD:
