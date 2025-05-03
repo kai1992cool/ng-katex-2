@@ -1,16 +1,15 @@
 {
   "name": "ng-katex-2",
   "version": "14.0.0",
+  "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^14.2.0",
-    "@angular/core": "^14.2.0"
-  },
-  "dependencies": {
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
     "extract-math": "^1.2.3",
     "katex": "^0.16.21",
-    "tslib": "^2.3.0"
-  },
-  "devDependencies": {
     "@types/katex": "^0.16.7"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
   }
 }
