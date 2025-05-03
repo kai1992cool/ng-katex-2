@@ -5,7 +5,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/kai1992cool/ng-katex-2.svg)](https://github.com/kai1992cool/ng-katex-2)
 [![npm](https://img.shields.io/npm/l/ng-katex-2.svg)](https://github.com/kai1992cool/ng-katex-2/blob/master/README.md)
 
-# About ng-KaTeX-2:
+## About ng-KaTeX-2:
 
 This repo was created for [ng-katex library is compatible with Angular 18?](https://stackoverflow.com/questions/79445693/ng-katex-library-is-compatible-with-angular-18)
 
@@ -15,7 +15,7 @@ Since angular18 is throwing error for components not being standalone, I upgrade
 
 All credits to the original author, I am just upgrading for it to work for latest versions of angular and future maintainenace if necessary.
 
-# Common Steps for standalone and modular:
+## Common Steps for standalone and modular:
 
 * First install `ng-katex-2`:
     
@@ -24,9 +24,9 @@ All credits to the original author, I am just upgrading for it to work for lates
 * If you want to use styling of `katex` refer the section [katex include css](#styling)
 
 
-# Usage with standalone components:
+### Usage with standalone components:
 
-# [Using `KatexDirective`](#standalonedirective):
+#### [Using `KatexDirective`](#standalonedirective):
 
 The `KatexDirective` requires `KatexService`, which needs to be provided, for this we need to add the `importProvidersFrom(KatexModule)` to our `bootstrapApplication`'s `providers` array.
 
@@ -38,7 +38,7 @@ The `KatexDirective` requires `KatexService`, which needs to be provided, for th
       providers: [importProvidersFrom(KatexModule)],
     });
 
-## Usage of other components:
+#### Usage of other components:
 
 The other component do not have any DI for `KatexService`, so you can just import and use them:
 
@@ -56,9 +56,9 @@ The other component do not have any DI for `KatexService`, so you can just impor
       };
     }
 
-# Usage with modules:
+### Usage with modules:
 
-# [Using `KatexDirective`](#modulesdirective):
+#### [Using `KatexDirective`](#modulesdirective):
 
 The `KatexDirective` requires `KatexService`, which needs to be provided, for this we need to add the `KatexModule` to imports array of `AppModule`.
 
@@ -89,7 +89,7 @@ We can also add `KatexDirective` to the `declarations` array and `KatexService` 
     export class AppModule {}
 
 
-# Version Table With Example:
+## Version Table With Example:
 
 | Angular version | ng-katex-2 version | Stackblitz Standalone Demo | Stackblitz Modular Demo  |
 | --------------- | ------------------ | -------------------------- | ------------------------ |
@@ -102,7 +102,7 @@ We can also add `KatexDirective` to the `declarations` array and `KatexService` 
 
 x -> stands for patch, where I post minor updates, can be ignored. But make sure you have `ng-katex-2` set to `^15.2.11`. Here `^` is important so that all minor and patch versions are considered, compared to `~` which only takes into account patch versions.
 
-# Troubleshooting:
+## Troubleshooting:
 
 
 
