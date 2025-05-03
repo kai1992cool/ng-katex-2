@@ -1,6 +1,6 @@
 {
   "name": "ng-katex-2",
-  "version": "14.0.0",
+  "version": "14.0.1",
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^14.0.0",
