@@ -4,12 +4,12 @@
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^14.0.0",
-    "@angular/core": "^14.0.0",
-    "extract-math": "^1.2.3",
-    "katex": "^0.16.21",
-    "@types/katex": "^0.16.7"
+    "@angular/core": "^14.0.0"
   },
   "dependencies": {
+    "extract-math": "^1.2.3",
+    "katex": "^0.16.21",
+    "@types/katex": "^0.16.7",
     "tslib": "^2.3.0"
   }
 }
