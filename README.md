@@ -1,5 +1,10 @@
 # ng-katex-2
 
+Angular module to write beautiful math expressions in TeX syntax boosted by [KaTeX](https://github.com/Khan/KaTeX) library.
+You can see a demo [here](https://garciparedes.github.io/ng-katex).
+
+---
+
 [![npm](https://img.shields.io/npm/v/ng-katex-2.svg)](https://www.npmjs.com/package/ng-katex-2)
 [![npm](https://img.shields.io/npm/dy/ng-katex-2.svg)](https://www.npmjs.com/package/ng-katex-2)
 [![GitHub stars](https://img.shields.io/github/stars/kai1992cool/ng-katex-2.svg)](https://github.com/kai1992cool/ng-katex-2)
@@ -97,8 +102,8 @@ We can also add `KatexDirective` to the `declarations` array and `KatexService` 
 | Angular 15      | 15.0.x             | [Stackblitz Demo - 15](https://stackblitz.com/edit/stackblitz-starters-payq5ruj?file=src%2Fmain.ts)   | [Stackblitz Demo - 15](https://stackblitz.com/edit/stackblitz-starters-s2cudydj) |
 | Angular 16      | 16.0.x             | [Stackblitz Demo - 16](https://stackblitz.com/edit/angular-ivy-16-hvbsfb1t?file=src%2Fmain.ts)   | [Stackblitz Demo - 16](https://stackblitz.com/edit/angular-ivy-16-2alkpoqp?file=src%2Fapp%2Fapp.module.ts) |
 | Angular 17      | 17.0.x             | [Stackblitz Demo - 17](https://stackblitz.com/edit/stackblitz-starters-tmkgvgmy?file=src%2Fapp%2Fapp.component.ts)   | [Stackblitz Demo - 17](https://stackblitz.com/edit/stackblitz-starters-qogbg3zt?file=src%2Fapp%2Fapp.module.ts) |
-| Angular 18      | 18.0.x             | [Stackblitz Demo - 18]()   | [Stackblitz Demo - 18]() |
-| Angular 19      | 19.0.x             | [Stackblitz Demo - 19]()   | [Stackblitz Demo - 19]() |
+| Angular 18      | 18.0.x             | [Stackblitz Demo - 18](https://stackblitz.com/edit/stackblitz-starters-6kndzswx)   | [Stackblitz Demo - 18](https://stackblitz.com/edit/stackblitz-starters-qtcvbowb) |
+| Angular 19      | 19.0.x             | [Stackblitz Demo - 19](https://stackblitz.com/edit/stackblitz-starters-kehozioh)   | [Stackblitz Demo - 19](https://stackblitz.com/edit/stackblitz-starters-kyqudqly) |
 
 x -> stands for patch, where I post minor updates, can be ignored. But make sure you have `ng-katex-2` set to `^15.2.11`. Here `^` is important so that all minor and patch versions are considered, compared to `~` which only takes into account patch versions.
 
