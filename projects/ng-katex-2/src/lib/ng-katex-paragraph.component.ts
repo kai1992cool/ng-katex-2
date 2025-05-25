@@ -1,13 +1,14 @@
 
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input, InputSignal, Signal } from '@angular/core';
 import { extractMath, Segment } from 'extract-math';
 import { KatexComponent } from './ng-katex.component';
+import { throwNoProviderError } from './utils';
 
 @Component({
   selector: 'ng-katex-paragraph',
   template: `
     <p>
-      @for (segment of segments; track segment) {
+      @for (segment of segments(); track segment) {
         @if (segment.math) {
           <ng-katex
             [equation]="segment.raw"
@@ -24,17 +25,15 @@ import { KatexComponent } from './ng-katex.component';
   standalone: true,
 })
 export class KatexParagraphComponent {
-
-  segments: Segment[] = [];
-
-  private _paragraph!: string;
-
-  @Input() set paragraph(paragraph: string) {
-
-    if (paragraph !== this._paragraph) {
-      this._paragraph = paragraph;
-      this.segments = extractMath(this._paragraph);
-    }
+  paragraph: InputSignal<string> = input.required();
+  segments: Signal<Segment[]> = computed(() => {
+    let segments = [];
+    const paragraph = this.paragraph();
+    segments = extractMath(paragraph);
+    return segments;
+  });
+  
+  constructor() {
+    throwNoProviderError();
   }
-
 }

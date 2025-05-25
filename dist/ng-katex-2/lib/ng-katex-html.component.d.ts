@@ -1,17 +1,12 @@
-import { Segment } from 'extract-math';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { KatexService } from './ng-katex.service';
+import { InputSignal, Signal } from '@angular/core';
+import { SafeHtml } from '@angular/platform-browser';
 import * as i0 from "@angular/core";
 export declare class KatexHtmlComponent {
     private domSanitizer;
     private katexService;
-    constructor(domSanitizer: DomSanitizer, katexService: KatexService);
-    allHtml: SafeHtml;
-    _html: string;
-    private _segments;
-    set html(html: string);
-    private updateAllHtml;
-    get segments(): Segment[];
+    html: InputSignal<string>;
+    allHtml: Signal<SafeHtml | undefined>;
+    constructor();
     static ɵfac: i0.ɵɵFactoryDeclaration<KatexHtmlComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<KatexHtmlComponent, "ng-katex-html", never, { "html": { "alias": "html"; "required": false; }; }, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<KatexHtmlComponent, "ng-katex-html", never, { "html": { "alias": "html"; "required": false; "isSignal": true; }; }, {}, never, never, true, never>;
 }
