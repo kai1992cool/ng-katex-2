@@ -96,7 +96,7 @@ We can also add `KatexDirective` to the `declarations` array and `KatexService` 
 | Angular 14      | 14.0.x             | [Stackblitz Demo - 14](https://stackblitz.com/edit/angular-ivy-4fju9eqz?file=src%2Fapp.component.ts)   | [Stackblitz Demo - 14](https://stackblitz.com/edit/angular-ivy-zoqjbezq?file=src%2Fapp.component.ts) |
 | Angular 15      | 15.0.x             | [Stackblitz Demo - 15](https://stackblitz.com/edit/stackblitz-starters-payq5ruj?file=src%2Fmain.ts)   | [Stackblitz Demo - 15](https://stackblitz.com/edit/stackblitz-starters-s2cudydj) |
 | Angular 16      | 16.0.x             | [Stackblitz Demo - 16](https://stackblitz.com/edit/angular-ivy-16-hvbsfb1t?file=src%2Fmain.ts)   | [Stackblitz Demo - 16](https://stackblitz.com/edit/angular-ivy-16-2alkpoqp?file=src%2Fapp%2Fapp.module.ts) |
-| Angular 17      | 17.0.x             | [Stackblitz Demo - 17]()   | [Stackblitz Demo - 17]() |
+| Angular 17      | 17.0.x             | [Stackblitz Demo - 17](https://stackblitz.com/edit/angular17-routing-and-services-eqtenfdn?file=src%2Fapp%2Fapp.component.ts)   | [Stackblitz Demo - 17](https://stackblitz.com/edit/angular17-routing-and-services-accztdgx) |
 | Angular 18      | 18.0.x             | [Stackblitz Demo - 18]()   | [Stackblitz Demo - 18]() |
 | Angular 19      | 19.0.x             | [Stackblitz Demo - 19]()   | [Stackblitz Demo - 19]() |
 
