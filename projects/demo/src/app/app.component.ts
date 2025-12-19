@@ -4,7 +4,7 @@ import { KatexOptions } from 'katex';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.css'],
   standalone: false,
 })
 export class AppComponent {
