@@ -1,14 +1,14 @@
 {
   "name": "ng-katex-2",
-  "version": "19.0.3",
+  "version": "20.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kai1992cool/ng-katex-2.git"
   },
   "peerDependencies": {
-    "@angular/common": "^19.0.0",
-    "@angular/core": "^19.0.0",
+    "@angular/common": "^20.3.15",
+    "@angular/core": "^20.3.15",
     "extract-math": "^1.2.3",
     "katex": "^0.16.21",
     "@types/katex": "^0.16.7"
