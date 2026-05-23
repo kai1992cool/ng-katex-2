@@ -11,7 +11,7 @@
     "@angular/core": "^20.0.0",
     "extract-math": "^1.2.3",
     "katex": "^0.17.0",
-    "@types/katex": "^0.16.7"
+    "@types/katex": "^0.16.8"
   },
   "dependencies": {
     "tslib": "^2.3.0"
