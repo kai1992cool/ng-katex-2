@@ -2,8 +2,8 @@ import * as i0 from '@angular/core';
 import { Injectable, inject, ElementRef, input, output, effect, Directive, Component, computed, ChangeDetectionStrategy, NgModule } from '@angular/core';
 import { render, renderToString } from 'katex';
 import { extractMath } from 'extract-math';
-import { CommonModule } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 class KatexService {
     render(equation, element, options) {
@@ -126,6 +126,47 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImpo
                 }]
         }], ctorParameters: () => [] });
 
+class KatexHtmlComponent {
+    constructor() {
+        this.domSanitizer = inject(DomSanitizer);
+        this.katexService = inject(KatexService);
+        this.html = input('');
+        this.allHtml = computed(() => {
+            const html = this.html();
+            let allHtmlValue = '';
+            let _segments = [];
+            if (!html) {
+                allHtmlValue = '';
+                _segments = [];
+                return allHtmlValue;
+            }
+            _segments = extractMath(html);
+            const allHtml = _segments.map((seg) => {
+                if (seg.math) {
+                    return this.katexService.renderToString(seg.raw, { displayMode: seg.type === 'display' });
+                }
+                else {
+                    return seg.value;
+                }
+            }).reduce((total, current) => {
+                return total += current;
+            });
+            return this.domSanitizer.bypassSecurityTrustHtml(allHtml);
+        });
+        throwNoProviderError();
+    }
+    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: KatexHtmlComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    /** @nocollapse */ static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "17.1.0", version: "18.2.13", type: KatexHtmlComponent, isStandalone: true, selector: "ng-katex-html", inputs: { html: { classPropertyName: "html", publicName: "html", isSignal: true, isRequired: false, transformFunction: null } }, ngImport: i0, template: `<span [innerHTML]="allHtml()"></span>`, isInline: true }); }
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: KatexHtmlComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'ng-katex-html',
+                    template: `<span [innerHTML]="allHtml()"></span>`,
+                    standalone: true,
+                }]
+        }], ctorParameters: () => [] });
+
 class KatexParagraphComponent {
     constructor() {
         this.paragraph = input.required();
@@ -177,47 +218,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImpo
                 }]
         }], ctorParameters: () => [] });
 
-class KatexHtmlComponent {
-    constructor() {
-        this.domSanitizer = inject(DomSanitizer);
-        this.katexService = inject(KatexService);
-        this.html = input('');
-        this.allHtml = computed(() => {
-            const html = this.html();
-            let allHtmlValue = '';
-            let _segments = [];
-            if (!html) {
-                allHtmlValue = '';
-                _segments = [];
-                return allHtmlValue;
-            }
-            _segments = extractMath(html);
-            const allHtml = _segments.map((seg) => {
-                if (seg.math) {
-                    return this.katexService.renderToString(seg.raw, { displayMode: seg.type === 'display' });
-                }
-                else {
-                    return seg.value;
-                }
-            }).reduce((total, current) => {
-                return total += current;
-            });
-            return this.domSanitizer.bypassSecurityTrustHtml(allHtml);
-        });
-        throwNoProviderError();
-    }
-    /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: KatexHtmlComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    /** @nocollapse */ static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "17.1.0", version: "18.2.13", type: KatexHtmlComponent, isStandalone: true, selector: "ng-katex-html", inputs: { html: { classPropertyName: "html", publicName: "html", isSignal: true, isRequired: false, transformFunction: null } }, ngImport: i0, template: `<span [innerHTML]="allHtml()"></span>`, isInline: true }); }
-}
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: KatexHtmlComponent, decorators: [{
-            type: Component,
-            args: [{
-                    selector: 'ng-katex-html',
-                    template: `<span [innerHTML]="allHtml()"></span>`,
-                    standalone: true,
-                }]
-        }], ctorParameters: () => [] });
-
 class KatexModule {
     /** @nocollapse */ static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: KatexModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
     /** @nocollapse */ static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "18.2.13", ngImport: i0, type: KatexModule, imports: [CommonModule,
@@ -245,6 +245,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImpo
                     providers: [
                         KatexService,
                     ],
+                    declarations: [],
                     exports: [
                         KatexDirective,
                         KatexComponent,
