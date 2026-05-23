@@ -10,7 +10,7 @@
     "@angular/common": "^20.0.0",
     "@angular/core": "^20.0.0",
     "extract-math": "^1.2.3",
-    "katex": "^0.16.21",
+    "katex": "^0.17.0",
     "@types/katex": "^0.16.7"
   },
   "dependencies": {
