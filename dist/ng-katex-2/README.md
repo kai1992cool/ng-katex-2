@@ -104,7 +104,6 @@ We can also add `KatexDirective` to the `declarations` array and `KatexService` 
 | Angular 17      | 17.0.x             | [Stackblitz Demo - 17](https://stackblitz.com/edit/stackblitz-starters-tmkgvgmy?file=src%2Fapp%2Fapp.component.ts)   | [Stackblitz Demo - 17](https://stackblitz.com/edit/stackblitz-starters-qogbg3zt?file=src%2Fapp%2Fapp.module.ts) |
 | Angular 18      | 18.0.x             | [Stackblitz Demo - 18](https://stackblitz.com/edit/stackblitz-starters-6kndzswx)   | [Stackblitz Demo - 18](https://stackblitz.com/edit/stackblitz-starters-qtcvbowb) |
 | Angular 19      | 19.0.x             | [Stackblitz Demo - 19](https://stackblitz.com/edit/stackblitz-starters-kehozioh)   | [Stackblitz Demo - 19](https://stackblitz.com/edit/stackblitz-starters-kyqudqly) |
-| Angular 20      | 20.0.x             | [Stackblitz Demo - 20](https://stackblitz.com/edit/stackblitz-starters-pcswesgc)   | [Stackblitz Demo - 20](https://stackblitz.com/edit/stackblitz-starters-fpvhtduc) |
 
 x -> stands for patch, where I post minor updates, can be ignored. But make sure you have `ng-katex-2` set to `^15.2.11`. Here `^` is important so that all minor and patch versions are considered, compared to `~` which only takes into account patch versions.
 
