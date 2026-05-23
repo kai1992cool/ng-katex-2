@@ -1,4 +1,16 @@
-# About ng-KaTeX-2:
+# ng-katex-2
+
+Angular module to write beautiful math expressions in TeX syntax boosted by [KaTeX](https://github.com/Khan/KaTeX) library.
+You can see a demo [here](https://garciparedes.github.io/ng-katex).
+
+---
+
+[![npm](https://img.shields.io/npm/v/ng-katex-2.svg)](https://www.npmjs.com/package/ng-katex-2)
+[![npm](https://img.shields.io/npm/dy/ng-katex-2.svg)](https://www.npmjs.com/package/ng-katex-2)
+[![GitHub stars](https://img.shields.io/github/stars/kai1992cool/ng-katex-2.svg)](https://github.com/kai1992cool/ng-katex-2)
+[![npm](https://img.shields.io/npm/l/ng-katex-2.svg)](https://github.com/kai1992cool/ng-katex-2/blob/master/README.md)
+
+## About ng-KaTeX-2:
 
 This repo was created for [ng-katex library is compatible with Angular 18?](https://stackoverflow.com/questions/79445693/ng-katex-library-is-compatible-with-angular-18)
 
@@ -185,6 +197,7 @@ class AppModule {}
 
 platformBrowserDynamic().bootstrapModule(AppModule);
 ```
+# [Styling](#styling)
 
 #### Important!
 **If you're using [`angular-cli`](https://github.com/angular/angular-cli), add the katex css import to your `styles.css`:**
