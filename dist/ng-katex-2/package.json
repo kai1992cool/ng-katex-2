@@ -1,33 +1,32 @@
 {
   "name": "ng-katex-2",
-  "version": "20.0.1",
+  "version": "21.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kai1992cool/ng-katex-2.git"
   },
   "peerDependencies": {
-    "@angular/common": "^20.0.0",
-    "@angular/core": "^20.0.0",
+    "@angular/common": "^21.0.0",
+    "@angular/core": "^21.0.0",
     "extract-math": "^1.2.3",
-    "katex": "^0.16.21",
-    "@types/katex": "^0.16.7"
+    "katex": "^0.17.0",
+    "@types/katex": "^0.16.8"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.5.0"
   },
   "module": "fesm2022/ng-katex-2.mjs",
-  "typings": "index.d.ts",
+  "typings": "types/ng-katex-2.d.ts",
   "exports": {
     "./package.json": {
       "default": "./package.json"
     },
     ".": {
-      "types": "./index.d.ts",
-      "esm2022": "./esm2022/ng-katex-2.mjs",
-      "esm": "./esm2022/ng-katex-2.mjs",
+      "types": "./types/ng-katex-2.d.ts",
       "default": "./fesm2022/ng-katex-2.mjs"
     }
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "type": "module"
 }
