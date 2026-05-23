@@ -15,5 +15,18 @@
   },
   "dependencies": {
     "tslib": "^2.5.0"
-  }
+  },
+  "module": "fesm2022/ng-katex-2.mjs",
+  "typings": "types/ng-katex-2.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./types/ng-katex-2.d.ts",
+      "default": "./fesm2022/ng-katex-2.mjs"
+    }
+  },
+  "sideEffects": false,
+  "type": "module"
 }
