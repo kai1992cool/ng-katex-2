@@ -2,7 +2,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "preserveSymlinks": true,
     "esModuleInterop": true,
@@ -16,9 +15,6 @@
     "declaration": false,
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
-    "paths": {
-      "@angular/*": ["node_modules/@angular/*"]
-    },
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
