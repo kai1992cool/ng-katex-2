@@ -106,7 +106,7 @@ We can also add `KatexDirective` to the `declarations` array and `KatexService` 
 | Angular 19      | 19.0.x             | [Stackblitz Demo - 19](https://stackblitz.com/edit/stackblitz-starters-kehozioh)   | [Stackblitz Demo - 19](https://stackblitz.com/edit/stackblitz-starters-kyqudqly) |
 | Angular 20      | 20.0.x             | [Stackblitz Demo - 20](https://stackblitz.com/edit/stackblitz-starters-pcswesgc)   | [Stackblitz Demo - 20](https://stackblitz.com/edit/stackblitz-starters-pdd1mqw3) |
 | Angular 21      | 21.0.x             | [Stackblitz Demo - 21](https://stackblitz.com/edit/stackblitz-starters-drjamh8v)   | [Stackblitz Demo - 21](https://stackblitz.com/edit/stackblitz-starters-vujhzjdj) |
-| Angular 21      | 21.0.x             | [Stackblitz Demo - 22](https://stackblitz.com/edit/stackblitz-starters-acmcmybn)   | [Stackblitz Demo - 22](https://stackblitz.com/edit/stackblitz-starters-mzysyztm) |
+| Angular 22      | 22.0.x             | [Stackblitz Demo - 22](https://stackblitz.com/edit/stackblitz-starters-acmcmybn)   | [Stackblitz Demo - 22](https://stackblitz.com/edit/stackblitz-starters-mzysyztm) |
 
 x -> stands for patch, where I post minor updates, can be ignored. But make sure you have `ng-katex-2` set to `^15.2.11`. Here `^` is important so that all minor and patch versions are considered, compared to `~` which only takes into account patch versions.
 
